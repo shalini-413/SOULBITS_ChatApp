@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="script.js"></script>
+  <title>ChatBot</title>
+</head>
+<body class="loading">
+
+  <div class="loading-overlay">
+    <i class="loading-spinner fas fa-spinner fa-spin"></i>
+  </div>
+
+  <header>
+    <h1 id="typed-heading" class="element"></h1>
+  </header>
+
+  <div id="entry">
+    <input type="text" id="username" placeholder="Enter your username">
+    <button onclick="setUsername()">Enter Chat</button>
+  </div>
+
+  <div id="chat-window" style="display: none;">
+    <ul id="messages"></ul>
+    <form id="form" action="">
+      <input id="message" autocomplete="off" placeholder="Type your message" />
+      <button>Send</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 ChatBot. All rights reserved.</p>
+  </footer>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script defer src="client.js"></script>
+</body>
+</html>
