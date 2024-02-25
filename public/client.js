@@ -16,4 +16,4 @@ $(document).ready(() => {
         $('#entry').hide();
         $('#chat-window').show();
       }
-    };
+    }})
