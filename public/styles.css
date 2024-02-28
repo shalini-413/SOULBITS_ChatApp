@@ -1,13 +1,13 @@
 /* General Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: cursive;
     margin: 0;
     padding: 0;
     color: #333;
-    background-image: url("../assets/brick.jpg");
-    background-size: cover; /* Fit the whole image on the screen */
+    background-image: url("img.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Replace "texture.jpg" with your texture image */
+    background-attachment: fixed;
 }
 
 /* Loading Styles */
@@ -21,7 +21,7 @@ body.loading {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9); /* Lighten loading overlay */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +30,11 @@ body.loading {
 
 .loading-spinner {
     font-size: 40px;
-    color: #4CAF50;
+    color: #ff00dd;
+}
+
+.element {
+    color: #c10da9; /* Set the desired color for the typed text */
 }
 
 /* Entry Styles */
@@ -40,39 +44,39 @@ body.loading {
 }
 
 #entry input {
-    margin-top: 100px;
-    padding: 10px;
+    margin-top: 20px;
+    padding: 12px;
     font-size: 16px;
     border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
     width: 60%;
     box-sizing: border-box;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Adding shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #entry button {
-    padding: 12px 24px;
-    font-size: 16px;
-    background-color:  #80663d;
+    padding: 16px 32px;
+    font-size: 18px;
+    /* background-color: #80663d; */
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 #entry button:hover {
-    background-color: #57431a;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
 }
 
 /* Chat Window Styles */
 #chat-window {
     max-width: 800px;
     margin: 10px auto;
-    background-color: rgba(255, 255, 255, 0.9); /* Adjust the opacity as needed */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
     overflow: hidden;
 }
 
@@ -100,14 +104,14 @@ form {
 
 input {
     flex: 1;
-    padding: 10px;
+    padding: 12px;
     font-size: 16px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 8px;
     margin-right: 10px;
     box-sizing: border-box;
     transition: border-color 0.3s ease;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Adding shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 input:focus {
@@ -116,22 +120,22 @@ input:focus {
 
 /* Button Styles */
 button {
-    padding: 12px 24px;
-    font-size: 16px;
-    background-color: #4CAF50;
+    padding: 16px 32px;
+    font-size: 18px;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
 }
 
 /* Responsive Styles */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 602px) {
     #chat-window {
         max-width: 100%;
         border-radius: 0;
@@ -141,25 +145,52 @@ button:hover {
         width: 100%;
         margin-right: 0;
     }
+
+    #entry {
+        margin-top: 20px;
+    }
+
+    #entry input {
+        margin-top: 20px;
+        width: 80%;
+    }
+
+    #entry button {
+        width: 80%;
+    }
+
+    #messages {
+        max-height: 300px;
+    }
+
+    form {
+        padding: 10px;
+    }
 }
 
 /* Header Styles */
 header {
     background-color: #57431a;
-    color: white;
+    color: yellow;
     text-align: center;
-    padding: 10px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px 0;
+    background-image: linear-gradient(to right top, #37052b, #4f0a4f, #5d1c7c, #5834b1, #1251eb);
 }
 
 /* Footer Styles */
 footer {
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
-    background-color: #57431a;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to right top, #37052b, #4f0a4f, #5d1c7c, #5834b1, #1251eb);
     color: white;
     text-align: center;
-    padding: 5px;
+    padding: 10px;
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/* Add this style for the fade-in effect */
+#chat-window, #entry {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
