@@ -1,158 +1,196 @@
+/* General Styles */
 body {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-margin: 0;
-padding: 0;
-background-color: #f5f5f5;
-color: #333;
-background-image: url("kitten.png");
-background-repeat: no-repeat;
-background-size: cover; /* or background-size: contain; depending on your preference */
+    font-family: cursive;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: url("img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-/* Rest of your CSS remains unchanged */
-
+/* Loading Styles */
 body.loading {
-overflow: hidden;
+    overflow: hidden;
 }
 
 .loading-overlay {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: rgba(255, 255, 255, 0.8);
-display: flex;
-justify-content: center;
-align-items: center;
-z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9); /* Lighten loading overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
 .loading-spinner {
-font-size: 40px;
-color: #4CAF50;
+    font-size: 40px;
+    color: #ff00dd;
 }
 
+.element {
+    color: #c10da9; /* Set the desired color for the typed text */
+}
+
+/* Entry Styles */
 #entry {
-text-align: center;
-margin-top: 50px;
+    text-align: center;
+    margin-top: 50px;
 }
 
 #entry input {
-margin-top: 100px;
-padding: 10px;
-font-size: 16px;
-border: 1px solid #ddd;
-border-radius: 4px;
-margin-bottom: 10px;
-width: 60%;
-box-sizing: border-box;
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 60%;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #entry button {
-padding: 12px 24px;
-font-size: 16px;
-background-color: #4CAF50;
-color: white;
-border: none;
-border-radius: 4px;
-cursor: pointer;
-transition: background-color 0.3s ease;
+    padding: 16px 32px;
+    font-size: 18px;
+    /* background-color: #80663d; */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 #entry button:hover {
-background-color: #45a049;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
 }
 
+/* Chat Window Styles */
 #chat-window {
-max-width: 800px;
-margin: 10px auto;
-/* margin-top: 100px; */
-background-color: #fff;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-border-radius: 8px;
-overflow: hidden;
+    max-width: 800px;
+    margin: 10px auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 #messages {
-
-
-list-style-type: none;
-padding: 0;
-margin: 0;
-overflow-y: auto;
-max-height: 400px;
-padding: 20px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    max-height: 400px;
+    padding: 20px;
 }
 
 #messages li {
-margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
+/* Form Styles */
 form {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 20px;
-border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid #ddd;
 }
 
 input {
-flex: 1;
-padding: 10px;
-font-size: 16px;
-border: 1px solid #ddd;
-border-radius: 4px;
-margin-right: 10px;
-box-sizing: border-box;
-transition: border-color 0.3s ease;
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-right: 10px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 input:focus {
-border-color: #4CAF50;
+    border-color: #4CAF50;
 }
 
+/* Button Styles */
 button {
-padding: 12px 24px;
-font-size: 16px;
-background-color: #4CAF50;
-color: white;
-border: none;
-border-radius: 4px;
-cursor: pointer;
-transition: background-color 0.3s ease;
+    padding: 16px 32px;
+    font-size: 18px;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-background-color: #45a049;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
 }
 
 /* Responsive Styles */
-@media screen and (max-width: 600px) {
-#chat-window {
-max-width: 100%;
-border-radius: 0;
+@media screen and (max-width: 602px) {
+    #chat-window {
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    input, button {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #entry {
+        margin-top: 20px;
+    }
+
+    #entry input {
+        margin-top: 20px;
+        width: 80%;
+    }
+
+    #entry button {
+        width: 80%;
+    }
+
+    #messages {
+        max-height: 300px;
+    }
+
+    form {
+        padding: 10px;
+    }
 }
 
-input, button {
-width: 100%;
-margin-right: 0;
-}
-}
+/* Header Styles */
 header {
-background-color: #4CAF50;
-color: white;
-text-align: center;
-padding: 30px;
-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: #57431a;
+    color: yellow;
+    text-align: center;
+    padding: 20px 0;
+    background-image: linear-gradient(to right top, #37052b, #4f0a4f, #5d1c7c, #5834b1, #1251eb);
 }
 
+/* Footer Styles */
 footer {
-background-color: #4CAF50;
-color: white;
-text-align: center;
-padding: 15px;
-position: fixed;
-bottom: 0;
-width: 100%;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to right top, #37052b, #4f0a4f, #5d1c7c, #5834b1, #1251eb);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Add this style for the fade-in effect */
+#chat-window, #entry {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
